@@ -46,7 +46,7 @@ Returns:
 
 | Argument      | Description                                                                                                                                                                                               | Type                    |
 |:-------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------:|
-| ev            | **ev** property stands for 'eigenvector' and is an array that contains the weights of each criteria. Columns are criteria and rows are alternatives.                                                      | Array of numeric data.  | 
+| ev            | **ev** property stands for 'eigenvector' and is an array that contains the weights of each criteria.                                                                                                      | Array of numeric data.  | 
 | ci            | **ci** property stands for 'consistency index' this is the indicator of inconsistency, higher than 0.2 should be reviewed.                                                                                | Float number.           |
  
  
@@ -76,7 +76,7 @@ MIT
 
 ## Contributing
 
-<https://github.com/patelotech/ahp>
+<https://github.com/patelotech/ahp-lite>
 
 ## Linting
 
