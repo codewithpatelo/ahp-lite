@@ -3,7 +3,7 @@
 const linearAlgebra = require('linear-algebra')();
 const Matrix = linearAlgebra.Matrix; `
 	
-const ahp = require('ahp');
+const ahp = require('ahp-lite');
 
 ```
 
@@ -36,12 +36,14 @@ Returns:
 
 
 **INPUT**
+
 | Argument      | Description                                                                                                                                                                                               | Mandatory  | Type                    |  Rules                                                                                                                                                                                                                 |
 |:-------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------:|:-----------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| c             | **c** argument stands for 'criteria matrix' and is a matrix that contains the data from comparative judgement between criteria based on Saaty scale. **(READ BIBLIOGRAPHY)**                                              | True       | Matrix of numeric data  | This argument **MUST** be a matrix object from linear-algebra module and **MUST** contain only numeric data.                                                                                                           | 
+| c             | **c** argument stands for 'criteria matrix' and is a matrix that contains the data from comparative judgement between criteria based on Saaty scale. **(READ BIBLIOGRAPHY)**                              | True       | Matrix of numeric data  | This argument **MUST** be a matrix object from linear-algebra module and **MUST** contain only numeric data.                                                                                                           | 
 
 
 **OUTPUT**
+
 | Argument      | Description                                                                                                                                                                                               | Type                    |
 |:-------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------:|
 | ev            | **ev** property stands for 'eigenvector' and is an array that contains the weights of each criteria. Columns are criteria and rows are alternatives.                                                      | Array of numeric data.  | 
