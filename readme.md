@@ -8,6 +8,7 @@ const ahp = require('ahp-lite');
 ```
 
 # AHP Lite
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/139085c90fc34d399e24d192f84c9da3)](https://app.codacy.com/app/patelotech/ahp-lite?utm_source=github.com&utm_medium=referral&utm_content=patelotech/ahp-lite&utm_campaign=Badge_Grade_Dashboard)
 [![npm version](https://badge.fury.io/js/recht.svg)](https://badge.fury.io/js/recht)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/dashersw/recht/master/LICENSE) [![Greenkeeper badge](https://badges.greenkeeper.io/patelotech/topsis.svg)](https://greenkeeper.io/)
 
