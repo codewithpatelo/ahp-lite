@@ -1,0 +1,50 @@
+{
+  "name": "ahp-lite",
+  "version": "1.0.0",
+  "description": "This is an implementation of AHP algorithm for multi-criteria decision-making and prescriptive analytics.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "lint": "eslint --ignore-path .eslintignore .",
+    "lint-fix": "eslint --ignore-path .eslintignore . -- --fix"
+  },
+  "precommit": [
+    "lint",
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patelotech/ahp-lite.git"
+  },
+  "keywords": [
+    "ahp",
+    "analytic hierchical proccess",
+    "saaty",
+    "multi-criteria",
+    "decision",
+    "making",
+    "multi-attribute",
+    "business intelligence",
+    "prescriptive analytics",
+    "operations research",
+    "decision science",
+    "analytics"
+  ],
+  "author": "Patricio J. Gerpe",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.11.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "mocha": "^5.2.0",
+    "mocha-lcov-reporter": "^1.3.0"
+  },
+  "dependencies": {
+    "linear-algebra": "^3.1.4"
+  }
+}
