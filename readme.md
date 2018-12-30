@@ -11,7 +11,7 @@ const ahp = require('ahp-lite');
 [![npm version](https://badge.fury.io/js/recht.svg)](https://badge.fury.io/js/recht)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/dashersw/recht/master/LICENSE) [![Greenkeeper badge](https://badges.greenkeeper.io/patelotech/topsis.svg)](https://greenkeeper.io/)
 
-This is a simplified implementation in Javascript for NodeJS of the algorithm AHP (Analytic Hierchical Proccess) created by Saaty in 1986. This method is utilised in the field of prescriptive analytics, operations research, decision science and managerial accouting to methodically asign weighting to conflicting criteria based on systematic and hierchical subjective judgement.
+This is a simplified implementation in Javascript for NodeJS of the algorithm AHP (Analytic Hierarchy Proccess) created by Saaty in 1986. This method is utilised in the field of prescriptive analytics, operations research, decision science and managerial accouting to methodically asign weighting to conflicting criteria based on systematic and hierchical subjective judgement.
 
 ## Installation
 
@@ -27,8 +27,7 @@ ahp.getWeights(c);
 
 Returns:
 ```javascript
-{ ev: [ 0.0999935629309767, 0.2192841758040972, 0.7871481741766173 ],
-  ci: 1.2096304490646 }
+{ ev: [ 0.1, 0.19, 0.71 ], ci: 0.12, cr: 0.21 }
 ```
 
 
@@ -44,10 +43,11 @@ Returns:
 
 **OUTPUT**
 
-| Argument      | Description                                                                                                                                                                                               | Type                    |
+| Property      | Description                                                                                                                                                                                               | Type                    |
 |:-------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------:|
 | ev            | **ev** property stands for 'eigenvector' and is an array that contains the weights of each criteria.                                                                                                      | Array of numeric data.  | 
-| ci            | **ci** property stands for 'consistency index' this is the indicator of inconsistency, higher than 0.2 should be reviewed.                                                                                | Float number.           |
+| ci            | **ci** property stands for 'consistency index' this is an indicator of inconsistency.                                                                                                                     | Float number.           |
+| cr            | **cr** property stands for 'consistency ratio' this is the standarised indicator of inconsistency, higher than 0.2 should be reviewed.                                                                    | Float number.           |
  
  
 **NOTE:** Make sure to read through bibliography below of AHP to understand how the algorithm works.
@@ -89,8 +89,8 @@ MIT
 
 ### Linting scripts
 
--   Error check: `npm run check`
--   Error fix:  `npm run lint` or `npm run lint -- --fix`
+-   Error checl: `npm run lint`
+-   Error fix:  `npm run lint-fix` or `npm run lint -- --fix`
 
 ## Bibliography
 

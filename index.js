@@ -2,6 +2,7 @@ const linearAlgebra = require('linear-algebra')();
 
 const Matrix = linearAlgebra.Matrix;
 
+const ri = [0, 0, 0.58, 0.9, 1.12, 1.24, 1.32, 1.41];
 
 exports.getWeights = function getWeights(c) {
 // ERROR HANDLERS
@@ -11,17 +12,22 @@ exports.getWeights = function getWeights(c) {
     return 'ERROR';
   }
 
+  if (c.cols > 8) {
+    console.log('ERROR. There are too many criteria to analyse. Try with less than 8.');
+    return 'ERROR.';
+  }
 
   // Calculating colum sum
 
   let j; // Cols
-  i = 0; // Rows
+  let i = 0; // Rows
   let colsum = 0;
+  let num = 0;
   const colsumArray = [];
 
   for (j = 0; j < c.cols; j += 1) {
     for (i = 0; i < c.rows; i += 1) {
-      const num = c.data[i][j];
+      num = c.data[i][j];
       colsum = num + colsum;
     }
 
@@ -60,11 +66,14 @@ exports.getWeights = function getWeights(c) {
       num = nc.data[i][j] + num;
     }
     num /= c.cols;
+
     ev.push(num);
+    num = 0;
   }
 
+
   j = 0;
-  em = [];
+  let em = [];
   for (j = 0; j < c.cols; j += 1) {
     em.push(ev);
   }
@@ -72,6 +81,7 @@ exports.getWeights = function getWeights(c) {
 
   // Computing consistency matrix
   const cm = c.mul(em);
+
 
   // Weighted sum value
   const wsm = [];
@@ -82,12 +92,13 @@ exports.getWeights = function getWeights(c) {
     for (j = 0; j < c.cols; j += 1) {
       num = cm.data[i][j] + num;
     }
-    num = num;
     wsm.push(num);
+    num = 0;
   }
 
+
   // Lamda
-  lamda = [];
+  const lamda = [];
   j = 0;
   for (j = 0; j < c.cols; j += 1) {
     lamda.push(wsm[j] / ev[j]);
@@ -101,12 +112,23 @@ exports.getWeights = function getWeights(c) {
     num = lamda[j] + num;
   }
   lamdaMax = num / c.cols;
-  console.log(lamdaMax);
+
 
   // Consistency Index
-  const ci = (lamdaMax - c.cols) / (c.cols - 1);
+  let ci = (lamdaMax - c.cols) / (c.cols - 1);
+  j = c.cols - 1;
+  let cr = ci / ri[j];
 
-  const resp = { ev, ci };
+  // Rounded values
+  j = 0;
+  for (j = 0; j < c.cols; j += 1) {
+    ev[j] = Math.round(ev[j] * 100) / 100;
+  }
+
+  ci = Math.round(ci * 100) / 100;
+  cr = Math.round(cr * 100) / 100;
+
+  const resp = { ev, ci, cr };
 
   return resp;
 }; // TERMINA FUNCION

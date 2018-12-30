@@ -1,7 +1,7 @@
 {
   "name": "ahp-lite",
-  "version": "1.0.0",
-  "description": "This is an implementation of AHP algorithm for multi-criteria decision-making and prescriptive analytics.",
+  "version": "1.2.0",
+  "description": "This is a minimal and optimised implementation of AHP algorithm for multi-criteria decision-making and prescriptive analytics.",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
@@ -18,7 +18,7 @@
   },
   "keywords": [
     "ahp",
-    "analytic hierchical proccess",
+    "Analytic Hierarchy Process",
     "saaty",
     "multi-criteria",
     "decision",
