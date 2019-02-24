@@ -12,6 +12,8 @@ const ahp = require('ahp-lite');
 [![npm version](https://badge.fury.io/js/recht.svg)](https://badge.fury.io/js/recht)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/dashersw/recht/master/LICENSE) [![Greenkeeper badge](https://badges.greenkeeper.io/patelotech/topsis.svg)](https://greenkeeper.io/)
 
+<a href="https://www.patreon.com/join/patelotech?" target="_blank"><img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" > </a>
+
 This is a simplified implementation in Javascript for NodeJS of the algorithm AHP (Analytic Hierarchy Proccess) created by Saaty in 1986. This method is utilised in the field of prescriptive analytics, operations research, decision science and managerial accouting to methodically asign weighting to conflicting criteria based on systematic and hierchical subjective judgement.
 
 ## Installation
